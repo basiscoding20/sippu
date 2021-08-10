@@ -7,9 +7,10 @@
   <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
       <!-- Sidebar - Brand -->
-      <a class="sidebar-brand d-flex align-items-center justify-content-center" style="background-color:white;" href="<?= base_url(); ?>">
-        <img src="<?= base_url('assets/img/moka.jpg'); ?>" alt="logo">
+      <a class="sidebar-brand d-flex align-items-center justify-content-center" class="bg-white text-dark text-left" href="<?= base_url(); ?>">
+        <img src="<?= base_url('assets/img/kablebak.png'); ?>" height='70' width='70' alt="logo">
       </a>
+        <span class="text-sm-center text-light"> Sistem Informasi Pelayanan Perizinan Usaha</span>
 
       <!-- Divider -->
       <hr class="sidebar-divider my-0">
@@ -34,13 +35,13 @@
 
        <li class="nav-item">
         <a class="nav-link" href="<?= base_url('Permohonan/tracking'); ?>">
-          <i class="fas fa-fw fa-folder"></i>
+          <i class="fas fa-fw fa-search"></i>
           <span>Tracking Permohonan</span></a>
       </li>
 
       <li class="nav-item">
         <a class="nav-link" href="<?= base_url('Surat'); ?>">
-          <i class="fas fa-fw fa-table"></i>
+          <i class="fas fa-fw fa-book-open"></i>
           <span>Surat Permohonan</span></a>
       </li>
   <?php } ?>
@@ -54,7 +55,7 @@
 
        <li class="nav-item">
         <a class="nav-link" href="<?= base_url('Permohonan/tracking'); ?>">
-          <i class="fas fa-fw fa-folder"></i>
+          <i class="fas fa-fw fa-search"></i>
           <span>Tracking Permohonan</span></a>
       </li>
   <?php } ?>
