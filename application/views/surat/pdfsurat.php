@@ -16,20 +16,20 @@
 <H3 align="center"><b>DINAS PERINDUSTRIAN DAN PERDAGANGAN</b></H3>
 
 <H1 align="center"><U>SURAT IZIN TEMPAT USAHA (SITU)</U></H1>
-<H3 align="center">NOMOR : 503/ 66-SITU/DPMPTSP/2019</H3>
+<H3 align="center">NOMOR : 0<?= $pdf['id_surat']; ?>/0<?= $pdf['id_mohon']; ?>-SITU/DPMPTSP/<?= date('Y', strtotime($pdf['tanggal'])); ?></H3>
 
 <h3 align="center">Memberikan Izin Tempat Usaha Kepada</h3>
 
 <table>
 	<tr>
+		<td><h3>NPWP</h3></td>
+		<td>:</td>
+		<td><h3><?= $pdf['npwp']; ?></h3></td>
+	</tr>
+	<tr>
 		<td><h3>Nama Perusahaan</h3></td>
 		<td>:</td>
 		<td><h3><?= $pdf['nama_perusahaan']; ?></h3></td>
-	</tr>
-	<tr>
-		<td><h3>Alamat Perusahaan</h3></td>
-		<td>:</td>
-		<td><h3><?= $pdf['alamat_perusahaan']; ?></h3></td>
 	</tr>
 	<tr>
 		<td><h3>Nama Pemilik/penanggung jawab</h3></td>
@@ -37,15 +37,15 @@
 		<td><h3><?= $pdf['nama_pemilik']; ?></h3></td>
 	</tr>
 	<tr>
-		<td><h3>NPWP</h3></td>
+		<td><h3>Alamat Perusahaan</h3></td>
 		<td>:</td>
-		<td><h3><?= $pdf['npwp']; ?></h3></td>
+		<td><h3><?= $pdf['alamat_perusahaan']; ?></h3></td>
 	</tr>
 </table><br>
-<p align="justify">dengan ketentuan bahwa perusahaan tersebut harus memenuhi persyaratan berdasarkan peraturan daerah kabupaten lebak no 41 tahun 2001 tentang izin gangguan dan tempat usaha sebagaimana telah diubah dengan peraturan daerah kabupaten lebak no 5 tahun 2006 tentang perubahan atas peraturan daerah kabupaten lebak nomor 41 tahun 2001. surat izin tempat usaha (SITU) ini sebagai dasar untuk mengajukan surat izin lainnya kepada instansi yang berwenang mengeluarkannya. surat izin tempat usaha (SITU) ini berlaku selama 5 (lima) tahun.</p>
+<p align="justify" style="text-indent: 40px; text-">Dengan ketentuan bahwa perusahaan tersebut harus memenuhi persyaratan berdasarkan peraturan daerah kabupaten lebak no 41 tahun 2001 tentang izin gangguan dan tempat usaha sebagaimana telah diubah dengan peraturan daerah kabupaten lebak no 5 tahun 2006 tentang perubahan atas peraturan daerah kabupaten lebak nomor 41 tahun 2001. surat izin tempat usaha (SITU) ini sebagai dasar untuk mengajukan surat izin lainnya kepada instansi yang berwenang mengeluarkannya. surat izin tempat usaha (SITU) ini berlaku selama 5 (lima) tahun.</p>
 
-<p align="right">dikeluarkan di Rangkasbitung</p>
-<p align="right">Tanggal 29 mei 2021</p>
+<p align="right">Dikeluarkan di Rangkasbitung</p>
+<p align="right">Tanggal <?= date('d M Y', strtotime($pdf['tanggal'])); ?></p>
 
 <table width="700px">
 	<tr>

@@ -35,8 +35,10 @@
                     <label for="exampleInputPassword1">Alamat Perusahaan</label>
                     <input type="text" class="form-control" name="alamat_perusahaan" value="<?= $surat['alamat_perusahaan']; ?>" readonly="readonly">
                   </div>
+
+
                   <div class="form-group">
-                    <input type="submit" name="buat" class="btn btn-primary" value="Buatkan Surat">
+                    <input type="submit" name="buat" class="btn btn-warning" value="Tandatangani Surat">
                   </div>
               </form>
             </div>

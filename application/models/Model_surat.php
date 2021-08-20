@@ -53,7 +53,7 @@ class Model_surat extends CI_Model
    public function getpdfbyid($id)
    {
 
-     $query = "SELECT tb_permohonan.*, tb_surat.id_surat,tb_surat.id_user,tb_surat.id_mohon,tb_surat.qr_code FROM tb_permohonan JOIN tb_surat
+     $query = "SELECT tb_permohonan.*, tb_surat.id_surat, tb_surat.created_at as tanggal,tb_surat.id_user,tb_surat.id_mohon,tb_surat.qr_code FROM tb_permohonan JOIN tb_surat
                   ON tb_permohonan.id_mohon=tb_surat.id_mohon where tb_permohonan.id_mohon='$id'";
       return $this->db->query($query)->row_array();
       

@@ -40,7 +40,7 @@
                  <td><?= $lihat['alamat_perusahaan']; ?></td>
                </tr>
                <tr>
-                 <td>File Pendukung</td>
+                 <td class="align-top">File Pendukung </td>
                  <td>:</td>
                  <td>
                    <a href="<?= base_url('uploads/') . $lihat['bpjs_k']; ?>">BPJS Ketenagakerjaan</a><br>

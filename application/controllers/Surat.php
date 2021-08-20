@@ -47,7 +47,7 @@ class Surat extends CI_Controller{
  
         $image_name=$id_mohon.'.png'; //buat name dari qr code sesuai dengan nim
  
-        $params['data'] = $id_mohon; //data yang akan di jadikan QR CODE
+        $params['data'] = base_url('Surat/cetak/'.$id_mohon); //data yang akan di jadikan QR CODE
         $params['level'] = 'H'; //H=High
         $params['size'] = 10;
         $params['savename'] = FCPATH.$config['imagedir'].$image_name; //simpan image QR CODE ke folder assets/images/

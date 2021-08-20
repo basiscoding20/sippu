@@ -30,14 +30,29 @@
                       <td><?= $dat['nama_pemilik']; ?></td>
                       <td><?= $dat['nama_perusahaan']; ?></td>
                       <td><?= $dat['alamat_perusahaan']; ?></td>
-                      <td> 
-                          <a href="<?= base_url('uploads/') . $dat['bpjs_k']; ?>">BPJS K</a><br>
-                          <a href="<?= base_url('uploads/') . $dat['foto']; ?>">Foto</a><br>
-                          <a href="<?= base_url('uploads/') . $dat['skdtu']; ?>">SKDTU</a><br>
-                          <a href="<?= base_url('uploads/') . $dat['siuk']; ?>">SIUK</a>
+                      <td align="center"> 
+                        <a href="<?= base_url('uploads/') . $dat['bpjs_k']; ?>" class="badge badge-pill badge-light" style="width: 80px"> BPJS K </a> <br>
+                        <a href="<?= base_url('uploads/') . $dat['foto']; ?>" class="badge badge-pill badge-info" style="width: 80px"> Foto </a><br>
+                        <a href="<?= base_url('uploads/') . $dat['skdtu']; ?>" class="badge badge-pill badge-secondary" style="width: 80px"> SKDTU </a><br>
+                        <a href="<?= base_url('uploads/') . $dat['siuk']; ?>" class="badge badge-pill badge-dark" style="width: 80px"> SIUK </a>
+                        <!-- <a href="<?= base_url('uploads/') . $dat['bpjs_k']; ?>">BPJS K</a><br>
+                        <a href="<?= base_url('uploads/') . $dat['foto']; ?>">Foto</a><br>
+                        <a href="<?= base_url('uploads/') . $dat['skdtu']; ?>">SKDTU</a><br>
+                        <a href="<?= base_url('uploads/') . $dat['siuk']; ?>">SIUK</a> -->
                       </td>
-                       <td><?= $dat['status']; ?></td>
-                       <td><a href="<?= base_url('Surat/lihat/') . $dat['id_mohon']; ?>" class="btn btn-primary">Lihat</a></td>
+                       <td>
+                         <?php 
+                       $stt = $dat['status'];
+                       if ($stt='diterima') {?>
+                         <span class="badge badge-pill badge-success">
+                       <?=
+
+                       $dat['status']; }?>
+                       </span> 
+                       </td>
+                       <td>
+                        <a href="<?= base_url('Permohonan/lihat/') . $dat['id_mohon']; ?>" class="btn btn-warning">Preview Surat</a>
+                        <a href="<?= base_url('Surat/lihat/') . $dat['id_mohon']; ?>" class="btn btn-primary">Proses</a></td>
                     </tr>
                   <?php endforeach; ?> 
                   </tbody>

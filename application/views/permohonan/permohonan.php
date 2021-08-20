@@ -18,7 +18,7 @@
                       <th>Nama Pemilik</th>
                       <th>Nama Perusahaan</th>
                       <th>Alamat Perusahaan</th>
-                      <th>File</th>
+                      <th>File View</th>
                       <th>Status</th>
                        <?php if($this->session->userdata('level')=='admin'){ ?>
                       <th>Action</th>
@@ -32,13 +32,21 @@
                       <td><?= $dat['nama_pemilik']; ?></td>
                       <td><?= $dat['nama_perusahaan']; ?></td>
                       <td><?= $dat['alamat_perusahaan']; ?></td>
-                      <td> 
-                          <a href="<?= base_url('uploads/') . $dat['bpjs_k']; ?>">BPJS K</a><br>
-                          <a href="<?= base_url('uploads/') . $dat['foto']; ?>">Foto</a><br>
-                          <a href="<?= base_url('uploads/') . $dat['skdtu']; ?>">SKDTU</a><br>
-                          <a href="<?= base_url('uploads/') . $dat['siuk']; ?>">SIUK</a>
+                      <td align="center"> 
+                          <a href="<?= base_url('uploads/') . $dat['bpjs_k']; ?>" class="badge badge-pill badge-light" style="width: 80px"> BPJS K </a> <br>
+                          <a href="<?= base_url('uploads/') . $dat['foto']; ?>" class="badge badge-pill badge-info" style="width: 80px"> Foto </a><br>
+                          <a href="<?= base_url('uploads/') . $dat['skdtu']; ?>" class="badge badge-pill badge-secondary" style="width: 80px"> SKDTU </a><br>
+                          <a href="<?= base_url('uploads/') . $dat['siuk']; ?>" class="badge badge-pill badge-dark" style="width: 80px"> SIUK </a>
                       </td>
-                       <td><?= $dat['status']; ?></td>
+                       <td><?php 
+                       $stt = $dat['status'];
+                       if ($stt='proses verifikasi') {?>
+                         <span class="badge badge-pill badge-danger">
+                       <?=
+
+                       $dat['status']; }?>
+                       </span>                       
+                       </td>
                        <?php if($this->session->userdata('level')=='admin'){ ?>
                        <td><a href="<?= base_url('Permohonan/lihat/') . $dat['id_mohon']; ?>" class="btn btn-primary">Lihat</a></td>
                        <?php } ?>
